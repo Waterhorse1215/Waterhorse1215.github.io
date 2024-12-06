@@ -7,38 +7,55 @@
     <link rel="stylesheet" href="css/style.css"> 
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <p>Brandon Young Lee</p>
-        <p><a href="index.html">About Brandon Lee</a></p>
-    </nav>
+    <!-- Header Section with Navigation -->
+    <header>
+        <nav>
+            <p>Brandon Young Lee</p>
+            <p><a href="index.html" aria-label="About Brandon Lee">About Brandon Lee</a></p>
+        </nav>
+    </header>
 
-    <!-- Contact Section -->
-    <section>
-        <h1>Contact Brandon Young Lee</h1>
-        <p>4189 Baverton Dr, Suwanee, GA, 30024, 951-733-3323, waterhorse1215@gmail.com</p>
-    </section>
+    <!-- Main Content -->
+    <main>
+        <!-- Contact Information Section -->
+        <section>
+            <h1>Contact Brandon Young Lee</h1>
+            <address>
+                4189 Baverton Dr, Suwanee, GA, 30024<br>
+                <a href="tel:+19517333323">951-733-3323</a><br>
+                <a href="mailto:waterhorse1215@gmail.com">waterhorse1215@gmail.com</a>
+            </address>
+        </section>
 
-    <hr>
+        <hr>
 
-    <!-- Contact Form -->
-    <form action="mailto:waterhorse1215@gmail.com" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="10" cols="30"></textarea><br><br>
-        <input type="submit" value="Submit">
-    </form>
+        <!-- Contact Form Section -->
+        <section>
+            <h2>Get in Touch</h2>
+            <form action="mailto:waterhorse1215@gmail.com" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true"><br><br>
 
-    <!-- Footer -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required aria-required="true"><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="10" cols="30" required aria-required="true"></textarea><br><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; Brandon Young Lee</p>
-        <p><a href="index.html">Brandon Lee</a></p>
-        <p><a href="https://www.linkedin.com/in/brandon-lee-345237244" target="_blank">
-            <i class="fa fa-linkedin"></i> LinkedIn Profile
-        </a></p>
+        <p>&copy; 2024 Brandon Young Lee</p>
+        <p><a href="index.html" aria-label="About Brandon Lee">Brandon Lee</a></p>
+        <p>
+            <a href="https://www.linkedin.com/in/brandon-lee-345237244" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <i class="fa fa-linkedin"></i> LinkedIn Profile
+            </a>
+        </p>
     </footer>
 </body>
 </html>
