@@ -1,16 +1,17 @@
 /* Remove default margins */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Use a modern Google font for cleaner typography */
+    background-color: #f0f4f8; /* Light background for the entire page */
 }
 
 /* Style navigation */
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #333; /* Dark background */
+    background-color: #2c3e50; /* Deep blue background */
     color: white;
-    padding: 10px;
+    padding: 15px;
 }
 
 nav p {
@@ -20,19 +21,21 @@ nav p {
 nav a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #1abc9c; /* Light teal on hover */
 }
 
 /* Style footer */
 footer {
     display: flex;
     justify-content: center;
-    background-color: #333; /* Dark background */
+    background-color: #2c3e50; /* Deep blue background */
     color: white;
-    padding: 10px;
+    padding: 15px;
 }
 
 footer p {
@@ -40,20 +43,24 @@ footer p {
 }
 
 footer a {
-    color: white;
+    color: #1abc9c; /* Teal link color */
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
+    color: #16a085; /* Darker teal on hover */
 }
 
 /* Splash section */
 .splash {
     text-align: center;
-    padding: 20px;
+    padding: 40px;
     background-image: url('../images/splash-bg.jpg'); /* Ensure the correct path */
     background-size: cover;
+    background-position: center;
+    color: white;
+    background-color: rgba(44, 62, 80, 0.7); /* Fallback if image is missing */
 }
 
 .splash img {
@@ -61,27 +68,40 @@ footer a:hover {
     border: 5px solid #fff; /* White border */
 }
 
-/* Heading styles */
-h1 {
-    font-family: 'Roboto', sans-serif;
-    color: #333; /* Dark grey */
+.splash h1 {
+    color: #ecf0f1; /* Light white-grey for the title */
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
-/* Styling for h2 headings */
-h2 {
+.splash .tagline {
+    font-size: 1.2em;
+    color: #bdc3c7; /* Soft grey for tagline */
+}
+
+/* Heading styles */
+h1, h2 {
     font-family: 'Roboto', sans-serif;
-    color: #555; /* Medium grey */
+}
+
+h1 {
+    color: #2c3e50; /* Dark blue for main headings */
+}
+
+h2 {
+    color: #34495e; /* Medium dark grey for section headings */
 }
 
 /* Border styling for horizontal rules */
 hr {
-    border: 2px solid #ccc; /* Light grey border */
+    border: 2px solid #ecf0f1; /* Light grey border */
     margin: 20px 0;
 }
 
 /* Unordered list styles */
 ul {
     list-style-type: square; /* Square bullets */
+    padding-left: 20px;
 }
 
 /* Description list */
@@ -93,12 +113,13 @@ dl {
 
 /* Link styles */
 a {
-    color: #0066cc; /* Blue link color */
+    color: #3498db; /* Vibrant blue link color */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline; /* Underline on hover */
+    color: #2980b9; /* Darker blue on hover */
 }
 
 /* Card layout for project section */
@@ -109,15 +130,22 @@ a:hover {
 }
 
 .card {
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .card img {
     width: 100%;
     height: auto;
+    border-bottom: 3px solid #3498db; /* Accent color on image bottom */
 }
 
 /* Contact page styles */
@@ -125,22 +153,41 @@ a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    background-color: #ecf0f1; /* Soft grey background */
 }
 
 input, textarea {
     width: 100%;
     margin: 10px 0;
-    padding: 10px;
+    padding: 15px;
+    border: 1px solid #bdc3c7; /* Light grey border */
+    border-radius: 5px;
 }
 
 input[type="submit"] {
-    background-color: #333;
+    background-color: #3498db; /* Blue button */
     color: white;
     border: none;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
 input[type="submit"]:hover {
-    background-color: #555;
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .three-col {
+        grid-template-columns: 1fr;
+    }
+
+    nav, footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
