@@ -1,41 +1,50 @@
-/* Remove default margins */
+/* Import Montserrat font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+/* General body styles */
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif; /* Use a modern Google font for cleaner typography */
-    background-color: #f0f4f8; /* Light background for the entire page */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0d; /* Black background */
+    color: #f5f5f5; /* Light text for contrast */
+    line-height: 1.6;
 }
 
-/* Style navigation */
+/* Navigation */
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #2c3e50; /* Deep blue background */
-    color: white;
-    padding: 15px;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 15px 30px;
+    border-bottom: 3px solid #e50914; /* Netflix-style red */
 }
 
 nav p {
     margin: 0;
+    font-weight: 800;
+    font-size: 1.2em;
+    letter-spacing: 1px;
 }
 
 nav a {
-    color: white;
+    color: #e50914;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 nav a:hover {
+    color: #ff4d4d;
     text-decoration: underline;
-    color: #1abc9c; /* Light teal on hover */
 }
 
-/* Style footer */
+/* Footer */
 footer {
     display: flex;
     justify-content: center;
-    background-color: #2c3e50; /* Deep blue background */
-    color: white;
+    background-color: #1a1a1a;
     padding: 15px;
+    border-top: 3px solid #e50914;
 }
 
 footer p {
@@ -43,143 +52,143 @@ footer p {
 }
 
 footer a {
-    color: #1abc9c; /* Teal link color */
+    color: #e50914;
     text-decoration: none;
+    font-weight: 600;
 }
 
 footer a:hover {
+    color: #ff4d4d;
     text-decoration: underline;
-    color: #16a085; /* Darker teal on hover */
 }
 
 /* Splash section */
 .splash {
     text-align: center;
-    padding: 40px;
-    background-image: url('../images/splash-bg.jpg'); /* Ensure the correct path */
+    padding: 50px 20px;
+    background-image: url('../images/splash-bg.jpg');
     background-size: cover;
     background-position: center;
-    color: white;
-    background-color: rgba(44, 62, 80, 0.7); /* Fallback if image is missing */
+    background-color: rgba(0, 0, 0, 0.85);
+    background-blend-mode: overlay;
 }
 
 .splash img {
     border-radius: 50%;
-    border: 5px solid #fff; /* White border */
+    border: 4px solid #e50914;
+    box-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
 }
 
 .splash h1 {
-    color: #ecf0f1; /* Light white-grey for the title */
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.8em;
+    color: #ffffff;
+    font-weight: 800;
+    margin-top: 20px;
 }
 
 .splash .tagline {
     font-size: 1.2em;
-    color: #bdc3c7; /* Soft grey for tagline */
+    color: #cccccc;
+    max-width: 700px;
+    margin: 20px auto;
 }
 
-/* Heading styles */
-h1, h2 {
-    font-family: 'Roboto', sans-serif;
+/* Headings */
+h1, h2, h3, h4 {
+    color: #e50914;
+    font-weight: 800;
 }
 
-h1 {
-    color: #2c3e50; /* Dark blue for main headings */
-}
-
-h2 {
-    color: #34495e; /* Medium dark grey for section headings */
-}
-
-/* Border styling for horizontal rules */
+/* Horizontal rule */
 hr {
-    border: 2px solid #ecf0f1; /* Light grey border */
-    margin: 20px 0;
+    border: none;
+    height: 2px;
+    background-color: #e50914;
+    margin: 30px 0;
 }
 
-/* Unordered list styles */
+/* Lists */
 ul {
-    list-style-type: square; /* Square bullets */
+    list-style-type: square;
     padding-left: 20px;
 }
 
-/* Description list */
-dl {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 10px;
+ul li {
+    margin-bottom: 8px;
 }
 
-/* Link styles */
-a {
-    color: #3498db; /* Vibrant blue link color */
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover */
-    color: #2980b9; /* Darker blue on hover */
-}
-
-/* Card layout for project section */
+/* Project cards */
 .three-col {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 25px;
+    padding: 20px 0;
 }
 
 .card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    padding: 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(229, 9, 20, 0.4);
 }
 
 .card img {
     width: 100%;
     height: auto;
-    border-bottom: 3px solid #3498db; /* Accent color on image bottom */
+    border-bottom: 3px solid #e50914;
 }
 
-/* Contact page styles */
+.card h3 {
+    padding: 15px;
+    font-size: 1.4em;
+    color: #ffffff;
+}
+
+.card ul {
+    padding: 0 15px 15px 35px;
+}
+
+/* Contact form */
 .one-col {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    background-color: #ecf0f1; /* Soft grey background */
+    padding: 30px;
+    background-color: #111;
+    border-radius: 10px;
 }
 
 input, textarea {
     width: 100%;
     margin: 10px 0;
     padding: 15px;
-    border: 1px solid #bdc3c7; /* Light grey border */
+    background-color: #1a1a1a;
+    border: 1px solid #e50914;
+    color: white;
     border-radius: 5px;
 }
 
 input[type="submit"] {
-    background-color: #3498db; /* Blue button */
+    background-color: #e50914;
     color: white;
     border: none;
-    padding: 15px;
+    font-weight: 700;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #2980b9; /* Darker blue on hover */
+    background-color: #ff1a1a;
 }
 
-/* Responsive Styles */
+/* Responsive */
 @media (max-width: 768px) {
     .three-col {
         grid-template-columns: 1fr;
@@ -187,7 +196,6 @@ input[type="submit"]:hover {
 
     nav, footer {
         flex-direction: column;
-        align-items: center;
         text-align: center;
     }
 }
