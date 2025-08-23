@@ -1,7 +1,7 @@
 /* Remove default margins */
 body {
     margin: 0;
-    font-family: 'Anton', sans-serif; /* Strong, bold modern font */
+    font-family: 'Times New Roman', Times, serif; /* Easier-to-read serif font */
     background-color: #000; /* Black background */
     color: #fff; /* White text */
     text-align: center; /* Global centering of text */
@@ -103,4 +103,3 @@ footer a:hover {
         flex-direction: column;
     }
 }
-
