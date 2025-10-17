@@ -3,60 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Brandon Lee</title>
-    <link rel="stylesheet" href="css/style.css"> 
+    <title>Contact Brandon Y. Lee</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Section with Navigation -->
+    <!-- Header Section -->
     <header>
         <nav>
-            <p>Brandon Young Lee</p>
-            <p><a href="index.html" aria-label="About Brandon Lee">About Brandon Lee</a></p>
+            <p>Brandon Y. Lee</p>
+            <p><a href="index.html" aria-label="About Brandon Lee">About</a></p>
         </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Contact Information Section -->
-        <section>
-            <h1>Contact Brandon Young Lee</h1>
-            <address>
-                4189 Baverton Dr, Suwanee, GA, 30024<br>
-                <a href="tel:+19517333323">951-733-3323</a><br>
-                <a href="mailto:brandonlee9025@gmail.com">brandonlee9025@gmail.com</a>
-            </address>
+        <!-- Contact Information -->
+        <section class="contact-info">
+            <h1>Contact Brandon Y. Lee</h1>
+            <div class="contact-card">
+                <p><strong>Location:</strong> Suwanee, Georgia 30024</p>
+                <p><strong>Phone:</strong> <a href="tel:+19517333323">951-733-3323</a></p>
+                <p><strong>Email:</strong> <a href="mailto:brandonlee9025@gmail.com">brandonlee9025@gmail.com</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/brandon-lee-345237244" target="_blank" rel="noopener noreferrer">View Profile</a></p>
+                <p><strong>Portfolio:</strong> <a href="https://waterhorse.github.io" target="_blank" rel="noopener noreferrer">waterhorse.github.io</a></p>
+            </div>
         </section>
 
         <hr>
 
-        <!-- Contact Form Section -->
-        <section>
+        <!-- Contact Form -->
+        <section class="contact-form">
             <h2>Get in Touch</h2>
+            <p>Feel free to reach out with questions, collaboration ideas, or opportunities. I’ll get back to you as soon as possible.</p>
+            
             <form action="mailto:waterhorse1215@gmail.com" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required aria-required="true"><br><br>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required aria-required="true"><br><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="10" cols="30" required aria-required="true"></textarea><br><br>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="8" required aria-required="true"></textarea>
+                </div>
 
-                <input type="submit" value="Submit">
+                <input type="submit" value="Send Message" class="submit-btn">
             </form>
         </section>
     </main>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Brandon Young Lee</p>
-        <p><a href="index.html" aria-label="About Brandon Lee">Brandon Lee</a></p>
+        <p>&copy; 2025 Brandon Y. Lee</p>
+        <p><a href="index.html" aria-label="About Brandon Lee">About</a></p>
         <p>
             <a href="https://www.linkedin.com/in/brandon-lee-345237244" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                <i class="fa fa-linkedin"></i> LinkedIn Profile
+                LinkedIn Profile
             </a>
         </p>
     </footer>
 </body>
 </html>
+
 
