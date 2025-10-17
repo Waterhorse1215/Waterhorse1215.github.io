@@ -4,15 +4,16 @@ body {
     font-family: 'Poppins', 'Times New Roman', serif;
     background-color: #000;
     color: #fff;
-    text-align: center;
-    line-height: 1.6;
+    text-align: left;
+    line-height: 1.8;
     overflow-x: hidden;
+    padding: 20px;
 }
 
 /* ====== Navigation ====== */
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 40px;
     background-color: #111;
@@ -64,8 +65,8 @@ address {
     border: 1px solid #ff0000;
     border-radius: 8px;
     padding: 20px;
-    margin: 20px auto;
-    width: 80%;
+    margin: 20px 0;
+    width: 100%;
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
 }
 
@@ -84,7 +85,7 @@ address a:hover {
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 15px;
     padding: 20px;
 }
@@ -98,7 +99,8 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: 80%;
+    width: 100%;
+    max-width: 600px;
     padding: 10px;
     background-color: #000;
     border: 2px solid #ff0000;
@@ -138,7 +140,7 @@ hr {
     border: none;
     border-top: 2px solid #ff0000;
     width: 60%;
-    margin: 40px auto;
+    margin: 40px 0;
     opacity: 0.8;
 }
 
@@ -147,7 +149,7 @@ footer {
     background-color: #111;
     padding: 25px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 30px;
     align-items: center;
     border-top: 2px solid #ff0000;
@@ -174,6 +176,7 @@ footer a:hover {
     padding: 40px;
     border-radius: 16px;
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+    text-align: left;
 }
 
 .levelup-section img {
@@ -190,9 +193,7 @@ footer a:hover {
 .levelup-section ul {
     list-style-type: none;
     padding: 0;
-    text-align: left;
-    margin: 20px auto;
-    max-width: 700px;
+    margin: 20px 0;
 }
 
 .levelup-section li::before {
@@ -216,9 +217,9 @@ footer a:hover {
 .programs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 30px;
     margin-top: 30px;
+    justify-content: flex-start;
 }
 
 .program-card {
@@ -279,7 +280,7 @@ footer a:hover {
     }
 
     section {
-        width: 90%;
+        width: 100%;
         padding: 25px;
     }
 
@@ -291,12 +292,13 @@ footer a:hover {
 
     .levelup-section img,
     .program-card img {
-        width: 90%;
+        width: 100%;
     }
 
     .programs {
         flex-direction: column;
         gap: 20px;
-        align-items: center;
+        align-items: flex-start;
     }
 }
+
