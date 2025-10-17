@@ -1,7 +1,7 @@
 /* ====== Base Styles ====== */
 body {
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Poppins', 'Times New Roman', serif;
     background-color: #000;
     color: #fff;
     text-align: center;
@@ -39,7 +39,7 @@ section {
     background-color: #111;
     margin: 50px auto;
     padding: 40px;
-    max-width: 800px;
+    max-width: 850px;
     border-radius: 12px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -51,7 +51,7 @@ section:hover {
 }
 
 /* ====== Headings ====== */
-h1, h2 {
+h1, h2, h3 {
     color: #ff0000;
     margin-bottom: 20px;
     text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
@@ -167,6 +167,49 @@ footer a:hover {
     text-shadow: 0 0 8px #ff4d4d;
 }
 
+/* ====== Level-Up Fitness Project ====== */
+.levelup-section {
+    background: linear-gradient(180deg, #111 0%, #000 100%);
+    border: 2px solid #ff0000;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+}
+
+.levelup-section img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    border: 1px solid #ff0000;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+}
+
+.levelup-section ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px auto;
+    max-width: 700px;
+}
+
+.levelup-section li::before {
+    content: "🔥 ";
+    color: #ff0000;
+}
+
+.levelup-section a {
+    color: #ff4d4d;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.levelup-section a:hover {
+    color: #ff6666;
+    text-shadow: 0 0 10px #ff4d4d;
+}
+
 /* ====== Responsive Design ====== */
 @media (max-width: 768px) {
     nav {
@@ -184,7 +227,12 @@ footer a:hover {
     textarea {
         width: 100%;
     }
+
+    .levelup-section img {
+        width: 90%;
+    }
 }
+
 
 
 
