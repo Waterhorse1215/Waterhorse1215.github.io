@@ -178,7 +178,9 @@ footer a:hover {
 
 .levelup-section img {
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 10px;
     border: 1px solid #ff0000;
     margin: 20px 0;
@@ -210,50 +212,63 @@ footer a:hover {
     text-shadow: 0 0 10px #ff4d4d;
 }
 
-/* ====== Study Abroad & OKFriends Program Cards ====== */
-.program-cards {
+/* ====== Program Cards ====== */
+.programs {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .program-card {
-    display: block;
     background-color: #111;
     border: 2px solid #ff0000;
     border-radius: 12px;
-    max-width: 400px;
-    text-align: left;
-    color: #fff;
-    text-decoration: none;
+    width: 380px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: left;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
-}
-
-.program-card img {
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    object-fit: cover;
-    height: 200px;
-}
-
-.program-card h3 {
-    margin: 15px;
-    font-size: 1.3rem;
-    color: #ff0000;
-}
-
-.program-card p {
-    margin: 0 15px 15px 15px;
-    color: #fff;
 }
 
 .program-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+.program-card img {
+    width: 100%;
+    max-width: 380px;
+    max-height: 220px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.program-card-content {
+    padding: 20px;
+}
+
+.program-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.program-card-content p {
+    margin: 0 0 10px 0;
+}
+
+.program-card-content a {
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.program-card-content a:hover {
+    color: #ff6666;
+    text-shadow: 0 0 8px #ff4d4d;
 }
 
 /* ====== Responsive Design ====== */
@@ -279,10 +294,9 @@ footer a:hover {
         width: 90%;
     }
 
-    .program-cards {
+    .programs {
+        flex-direction: column;
         gap: 20px;
+        align-items: center;
     }
 }
-
-
-
